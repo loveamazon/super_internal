@@ -1,0 +1,2 @@
+class GoogleAuthException(Exception):
+    pass

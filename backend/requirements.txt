@@ -1,0 +1,7 @@
+httplib2
+oauth2client
+dependency_injector
+mock
+pymongo
+falcon
+requests

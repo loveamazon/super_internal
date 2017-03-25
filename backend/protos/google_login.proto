@@ -1,0 +1,19 @@
+syntax = "proto2";
+package google_account_login_request;
+
+message GoogleLoginRequest {
+    required string token = 1;
+    required string google_player_id = 2;
+}
+
+enum ResponseCode {
+    OK = 0;
+    INVALID_ARGUMENT = 1;
+    AUTH_FAILED = 2;
+    UNKNOWN_ERROR = 3;
+};
+
+message GoogleLoginResponse {
+    required ResponseCode code = 1;
+    optional string token = 2;
+}

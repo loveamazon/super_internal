@@ -1,0 +1,19 @@
+syntax = "proto2";
+package account_login_request;
+
+message AccountLoginRequest {
+    required string name = 1;
+    required string password = 2;
+}
+
+enum ResponseCode {
+    OK = 0;
+    INVALID_ARGUMENT = 1;
+    AUTH_FAILED = 2;
+    UNKNOWN_ERROR = 3;
+};
+
+message AccountLoginResponse {
+    required ResponseCode code = 1;
+    optional string token = 2;
+}

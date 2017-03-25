@@ -1,0 +1,31 @@
+syntax = "proto2";
+package account;
+
+message RegisterAccountRequest {
+    required string name = 1;
+    required string password = 2;
+    required string email = 3;
+    optional string display_name = 4;
+}
+
+enum ResponseCode {
+    OK = 0;
+    DUPLICATED = 1;
+    UNKNOWN_ERROR = 3;
+};
+
+message RegisterAccountResponse {
+    required ResponseCode code = 1;
+}
+
+
+message GetAccountResponse {
+    required string user_id = 1;
+    required string name = 2;
+    required string display_name = 3;
+    required string email = 4;
+    optional string external_user_id = 5;
+    optional string password = 6;
+}
+
+
