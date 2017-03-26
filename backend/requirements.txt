@@ -5,3 +5,6 @@ mock
 pymongo
 falcon
 requests
+gunicorn
+gevent
+grpcio
